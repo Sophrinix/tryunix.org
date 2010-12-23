@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:py="http://genshi.edgewall.org/">
+	<head>
+		<title>${title}</title>
+		<body class="index">
+			<div id="header">
+				<h1>${title}</h1>
+			</div>
+			<p>${result}</p>
+			<form action="exec" method="post" accept-charset="utf-8">
+				<label>Command:</label><input type="text" name="command">
+				<p><input type="submit" name="Run"></p>
+			</form>
+			</div id="footer">
+			<hr />
+			<p class="legalese">&copy; 2010 Alexandre Gauthier<br />Tryunix.org - Try unix in a browser</p>
+		</body>
+	</head>
+</html>
