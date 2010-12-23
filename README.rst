@@ -16,13 +16,14 @@ tryruby.org, tryerlang.org, tryhaskell.org and the likes.
 I thought something completely stupid like:
 
   "Hey! I love Unix and wish to get people to try it! I also know some Python! 
-  And I know for a *fact* that jquery-console_ exists! And I basically know how RESTful
-  web services work, and could probably get away with writing a simple backend to such a console
-  that could emulate a basic unix system! **How hard can it be?**
+  And I know for a *fact* that jquery-console_ exists and could do this stuff! 
+  And I basically know how RESTful web services work, and could probably get 
+  away with writing a simple backend to such a console that could emulate a 
+  basic unix system! **How hard could it be? I can totally do this!**"
 
 And then the Adderall wore off and I found myself biting my lower lip, looking at the receipt for the purchase of the tryunix.org_ domain, and the very scarce documentation_ for WebCore_ (however the code_ is very, very readable, so that's not insurmountable). Still, I sat there with a single sentence resonating through my thoughts, as read by some aggravated deity's booming voice:
 
-  *OH GOD WHAT HAVE YOU DONE?*
+*"OH GOD WHAT HAVE YOU DONE?"*
 
 Hopefully one day, this code will be functional and I can say I'm the creative mastermind behind the piece of crud that is tryunix.org_.
 
@@ -34,30 +35,30 @@ the requirements as they come.
 
 System:
 ~~~~~~~~
- * Python 2.5+
- * virtualenv_ is strongly recommended
- * distribute/setuptools (should be pretty standard)
- * A decent web server supporting WSGI
+* Python 2.5+
+* virtualenv_ is strongly recommended
+* distribute/setuptools (should be pretty standard)
+* A decent web server supporting WSGI
 
               -- OR --
 
- * gunicorn_ behind something like nginx_.
+* gunicorn_ behind something like nginx_.
 
 Python Modules:
 ~~~~~~~~~~~~~~~~  
- * WebCore_
- * Genshi_
- * Beaker_
+* WebCore_
+* Genshi_
+* Beaker_
 
 Very Quick Hacker's Guide to Poking at the Source
 ---------------------------------------------------
 
- 1. ``$ mkdir ~/.python-envs/``
- 2. ``$ virtualenv --distribute --no-site-packages ~/.python-envs/tryunix``
- 3. ``$ source ~/.python-envs/tryunix/bin/activate``
- 4. ``(tryunix)$ pip install WebCore``
- 5. ``(tryunix)$ git clone https://github.com/mrdaemon/tryunix.org.git``
- 6. ``(tryunix)$ cd tryunix.org && python setup.py develop``
+1. ``$ mkdir ~/.python-envs/``
+2. ``$ virtualenv --distribute --no-site-packages ~/.python-envs/tryunix``
+3. ``$ source ~/.python-envs/tryunix/bin/activate``
+4. ``(tryunix)$ pip install WebCore``
+5. ``(tryunix)$ git clone https://github.com/mrdaemon/tryunix.org.git``
+6. ``(tryunix)$ cd tryunix.org && python setup.py develop``
 
 You're set. Run `paster serve --reload dev.ini` to launch the app,
 the point your browser at http://127.0.0.1:8888/
